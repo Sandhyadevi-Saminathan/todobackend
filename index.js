@@ -22,10 +22,11 @@ const options = {
     max: 9999,
     integer: true
 }
+app.use(express.json());
 app.use(cors({
     origin: "https://stellular-hotteok-0e643a.netlify.app"
 }))
-app.use(express.json());
+
 
 const authorize = (req, res, next) => {
     if (req.headers.authorization) {
